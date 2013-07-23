@@ -4,6 +4,6 @@ Feature: Articles
   To be able to explore web content
 
   Scenario: Article listing
-    Given Several articles exists
+    Given several articles exists
     When I visit an artiles page
-    Then I should listing of artiles
+    Then I should see existing articles
