@@ -12,5 +12,6 @@ matrix:
     - rvm: rbx-19mode
 
 script:
+  - "RAILS_ENV=test bundle exec rake db:test:prepare"
   - "bundle exec rspec"
   - "bundle exec cucumber"
