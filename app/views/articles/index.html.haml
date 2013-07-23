@@ -1,0 +1,9 @@
+%h1 Listing articles
+
+.add-new.article
+  = link_to 'New Article', new_article_path
+
+.articles(ng-controller="ArticlesCtrl")
+  - @articles.each do |article|
+    = render partial: 'article', locals: {article: article}
+

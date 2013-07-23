@@ -1,0 +1,7 @@
+%article.article
+  .title= article.title
+  .content= article.content
+  .links
+    = link_to 'Show', article
+    = link_to 'Edit', edit_article_path(article)
+    = link_to 'Destroy', article, :method => :delete, :data => { :confirm => 'Are you sure?' }
