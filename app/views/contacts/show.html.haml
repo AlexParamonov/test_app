@@ -1,17 +1,8 @@
 %p#notice= notice
-
-%p
-  %b First name:
-  = @contact.first_name
-%p
-  %b Last name:
-  = @contact.last_name
-%p
-  %b Email:
-  = @contact.email
-%p
-  %b Phone number:
-  = @contact.phone_number
+.contact
+  %h2= contact.name
+  .email= @contact.email
+  .phone_number= @contact.phone_number
 
 = link_to 'Edit', edit_contact_path(@contact)
 \|
