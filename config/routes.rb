@@ -1,4 +1,6 @@
 TestApp::Application.routes.draw do
+  resources :contacts
+
   resources :articles
 
   root 'welcome#index'

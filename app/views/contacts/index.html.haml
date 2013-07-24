@@ -1,0 +1,13 @@
+%h1 Listing contacts
+
+.add-new.contact
+  = link_to 'New Contact', new_contact_path
+
+.contacts
+  - @contacts.each do |contact|
+    %article
+      .title= contact.name
+      .contact_methods
+        .email= contact.email
+        .phone_number= contact.phone_number
+
