@@ -4,7 +4,9 @@ class ContactsController < ApplicationController
   # GET /contacts
   # GET /contacts.json
   def index
-    @contacts = Contact.all
+    @contacts = Contact.all.map do |contact|
+      ContactPresenter.new contact
+    end
   end
 
   # GET /contacts/1
@@ -59,6 +61,10 @@ class ContactsController < ApplicationController
       format.html { redirect_to contacts_url }
       format.json { head :no_content }
     end
+  end
+
+  def contact
+    @presenter ||= ContactPresenter.new(@contact)
   end
 
   private
