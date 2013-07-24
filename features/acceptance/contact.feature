@@ -7,3 +7,8 @@ Feature: Contact
     Given no contacts exists
     When I add a new contact
     Then I should see it on a list
+
+  Scenario: Contact listing
+    Given several contacts exists
+    When I open a list of contacts
+    Then I should see my contacts
